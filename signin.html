@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to Signaleaf Technologies</title>
+    
+    <link rel="stylesheet" href="styles/signin.css">
+
+</head>
+<body>
+    <div class="container">
+        <img src="images/a cool logo for Signaleaf (1).png" alt="30" width="50"> <!-- Add your logo URL in the src attribute -->
+        <h2>Sign in to Signaleaf Technologies</h2>
+        <input type="text" id="username" placeholder="Username or email address" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <a href="#">Forgot password?</a>
+        <button class="shiny-button" onclick="signIn()">Sign in</button>
+        <button class="shiny-button" onclick="location.href='signup.html'">New to Signaleaf? Create an account</button>
+        <a class="shiny-button" onclick="location.href='home.html'">MAIN PAGE</a>
+    </div>
+
+    <script>
+        async function signIn() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username && password) {
+                try {
+                    // Check the username or email in a web database
+                    let response = await fetch('https://example.com/api/check-credentials', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ username, password })
+                    });
+                    let result = await response.json();
+                    if (result.success) {
+                        alert('Sign in successful');
+                    } else {
+                        alert('Invalid username or password');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                }
+            } else {
+                alert('Please fill in both fields.');
+            }
+        }
+    </script>
+
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/03/14/20241103145029-O096OH1C.js"></script>
+
+
+</body>
+</html>

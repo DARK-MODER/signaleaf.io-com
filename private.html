@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles/private.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/a cool logo for Signaleaf (1).png" alt="Company Logo">
+            <span>Signaleaf Technologies</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">About</a></li>
+                <li><a href="support.html">Support</a></li>
+                <li><a href="setttings.html">Privacy and Policy</a></li>
+            </ul>
+        </nav>
+        <div class="settings">
+            <a href="#settings"><i class="fas fa-cog"></i></a>
+        </div>
+    </header>
+    <div class="sidebar">
+        <a href="private.html">SIGNALEAF</a>
+        <a href="#account">TECHNOLOGIES</a>
+    </div>
+    <div class="main-content">
+        <h2>Profile Settings</h2>
+        <div class="form-group">
+            <label for="profile-pic">Profile Picture</label>
+            <div id="profile-pic-container" class="profile-pic-placeholder">
+                <i class="fas fa-user"></i>
+            </div>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+            <button type="button" id="view-pic">View Picture</button>
+            <button type="button" id="upload-device">Upload from Device</button>
+            <button type="button" id="upload-internet">Upload from Internet</button>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" value="CurrentUsername">
+        </div>
+        <div class="form-group">
+            <label for="user-id">User ID</label>
+            <input type="text" id="user-id" name="user-id" value="123456" readonly>
+        </div>
+        <h2>Account Management</h2>
+        <div class="form-group">
+            <label for="password">Change Password</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <button type="button">Logout</button>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <img id="modal-img" src="" alt="Profile Picture">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+        document.getElementById('view-pic').addEventListener('click', function() {
+            const profilePicContainer = document.getElementById('profile-pic-container');
+            const backgroundImage = profilePicContainer.style.backgroundImage;
+            if (backgroundImage) {
+                const modal = document.getElementById('modal');
+                const modalImg = document.getElementById('modal-img');
+                modalImg.src = backgroundImage.slice(5, -2);
+                modal.classList.add('show');
+            }
+        });
+
+        document.getElementById('modal').addEventListener('click', function() {
+            this.classList.remove('show');
+        });
+
+        document.getElementById('upload-device').addEventListener('click', function() {
+            document.getElementById('profile-pic').click();
+        });
+
+        document.getElementById('profile-pic').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profilePicContainer = document.getElementById('profile-pic-container');
+                    profilePicContainer.style.backgroundImage = `url(${e.target.result})`;
+                    profilePicContainer.classList.remove('profile-pic-placeholder');
+                    console.log('Profile pic successfully uploaded');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('upload-internet').addEventListener('click', function() {
+            const url = prompt("Enter image URL:");
+            if (url) {
+                const profilePicContainer = document.getElementById('profile-pic-container');
+                profilePicContainer.style.backgroundImage = `url(${url})`;
+                profilePicContainer.classList.remove('profile-pic-placeholder');
+                console.log('Profile pic successfully uploaded');
+            }
+        });
+
+        // Fetch user data from database.js
+        async function fetchUserData() {
+            const response = await fetch('/path/to/database.js');
+            const data = await response.json();
+            document.getElementById('username').value = data.username;
+            document.getElementById('user-id').value = data.userId;
+            const profilePicContainer = document.getElementById('profile-pic-container');
+            if (data.profilePic) {
+                profilePicContainer.style.backgroundImage = `url(${data.profilePic})`;
+                profilePicContainer.classList.remove('profile-pic-placeholder');
+            }
+        }
+
+        fetchUserData();
+    </script>
+
+    
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/11/03/14/20241103145029-O096OH1C.js"></script>
+</body>
+</html>

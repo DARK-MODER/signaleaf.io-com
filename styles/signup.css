@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+.left-section {
+    width: 50%;
+    background-color: #5f5b59;
+    background-image: url(../images/download.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.left-section p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+.right-section {
+    width: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-form {
+    background: #f7f7f7;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 80%;
+}
+.signup-form h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.signup-form p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+.signup-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    background: transparent;
+    color: black;
+    backdrop-filter: blur;
+}
+.signup-form button {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border-radius: 40px;
+}
+.main{
+    width: calc(80% - 10px);
+    padding: 0%;
+    border-radius: 40px;
+    border: none;
+    background-color: greenyellow;
+    font-size: 1em;
+    cursor: pointer;
+    color: #5f5b59;
+    margin: 10px 0;
+
+}
+.signup-form button:hover {
+    background-color: #218838;
+}
+.social-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.social-signup button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em; background-color: rgb(155, 131, 87); 
+    border-radius: 40px;
+}

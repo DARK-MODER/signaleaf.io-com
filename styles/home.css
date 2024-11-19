@@ -1,0 +1,216 @@
+
+footer { background-color: #333;
+    color: #fff; 
+    text-align: center;
+     padding: 20px 0; } 
+
+     .footer-icons { 
+       list-style: none; 
+       padding: 0; display: flex; 
+       justify-content: center; 
+       gap: 20px; } 
+       
+       .footer-icons li { 
+           display: inline;
+
+        } 
+        
+        .footer-icons a {
+            color: #fff; 
+            font-size: 24px;
+             text-decoration: dashed;
+             transition: color 0.3s; } 
+             
+             .footer-icons a:hover { 
+               color: #ddd; }
+
+   
+   .testimonies {
+       padding: 20px;
+       background-color: #fff;
+       background-image: url(../images/testimony.jpeg);
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       border-radius: 8px;
+   }
+
+   #testimonies h2 {
+       text-align: center;
+       color: hwb(0 96% 4%);
+       margin-bottom: 30px;
+   }
+
+   .testimonies {
+       display: flex;
+       align-items: center;
+       margin-bottom: 20px;
+   }
+
+   .testimonies img {
+       border-radius: 50%;
+       width: 80px;
+       height: 80px;
+       margin-right: 20px;
+       border: none;
+   }
+
+   .testimonies blockquote {
+       background-color: none;
+       background-position: center;
+       background-size: cover;
+       background-repeat: no-repeat;
+       border-left: none;
+       padding: 10px 15px;
+       margin: 0;
+       border-radius: 4px;
+       font-style: italic;
+       color: hwb(0 83% 16%);
+   }
+
+   .testimonies blockquote cite {
+       display: block;
+       text-align: right;
+       color: hwb(0 94% 5%);
+       margin-top: 10px;
+   }
+
+   .testimonies:last-child {
+       margin-bottom: 0;
+   }
+
+
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: hsl(220, 6%, 10%);
+           color: #ebe4e4;
+           
+       }
+       .header {
+           background-color: #333;
+           color: white;
+           padding: 10px 20px;
+           text-align: center;
+       }
+       .header nav a {
+           color: white;
+           text-decoration: none;
+           margin: 0 15px;
+           font-size: 1.2em;
+       }
+       .upper-section {
+           background-image: url('background.jpg'); /* Add your background image */
+           background-size: cover;
+           background-position: center;
+           color: white;
+           text-align: center;
+           padding: 100px 20px;
+           background-image: url(../images/wallpaper.jpeg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .lower-section h1 {
+           font-family: 'Dancing Script', cursive;
+           font-size: 3em;
+       }
+       .lower-section p {
+           font-size: 1.5em;
+       }
+       .lower-section {
+           background-image: url('background.jpg'); /* Add your background image */
+           background-size: cover;
+           background-position: center;
+           color: white;
+           text-align: center;
+           padding: 100px 20px;
+           background-image: url(../images/wallpaper.jpeg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .upper-section h1 {
+           font-family: 'Dancing Script', cursive;
+           font-size: 3em;
+       }
+       .upper-section p {
+           font-size: 1.5em;
+       }
+       .horizontal-section {
+           display: flex;
+           justify-content: space-around;
+           padding: 20px;
+           color: aliceblue;
+           background-color: hwb(0 90% 7%);
+           background-image: url(../images/dark.jpeg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .horizontal-section div {
+           width: 30%;
+           text-align: center;
+       }
+       .horizontal-section img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+       }
+       .horizontal-section p {
+           margin-top: 10px;
+       }
+
+   
+       .innovation {
+           display: flex;
+           justify-content: space-around;
+           padding: 20px;
+           color: aliceblue;
+           background-color: hwb(0 90% 7%);
+           background-image: url(../images/planet.jpeg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .innovation div {
+           width: 30%;
+           text-align: center;
+       }
+       .innovation img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+       }
+       .innovation p {
+           margin-top: 10px;
+       }
+
+
+
+   
+       .horizontal-section2 {
+           display: flex;
+           justify-content: space-around;
+           padding: 20px;
+           color: aliceblue;
+           background-color: hwb(0 90% 7%);
+           background-image: url(../images/desk.jpeg);
+           background-position: center;
+           background-repeat: no-repeat;
+           background-size: cover;
+       }
+       .horizontal-section2 div {
+           width: 30%;
+           text-align: center;
+       }
+       .horizontal-section2 img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+       }
+       .horizontal-section2 p {
+           margin-top: 10px;
+       }

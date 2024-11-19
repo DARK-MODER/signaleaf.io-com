@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d1117;
+    color: white;
+    text-align: center;
+    background-image: url(../images/back.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #161b22;
+    background-image: url(../images/planet.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.navbar input {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+.main-content {
+    padding: 100px 20px;
+}
+.main-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.main-content p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+.main-content input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+}
+
+.main-content button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2e9637;
+    color: rgb(189, 25, 25);
+    cursor: pointer;
+    size: 5px;
+}
+.main-content button.secondary {
+    background-color: #34ac48;
+}
